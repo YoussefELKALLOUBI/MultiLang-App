@@ -20,9 +20,38 @@ Le projet est organisé comme suit :
 - Git
 
 ## Installation et configuration
-Clonez le dépôt Git
-cd multilang_site
 
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+1. Clonez le dépôt Git :
+
+    ```bash
+    git clone https://github.com/YoussefELKALLOUBI/tt3.git
+    cd multilang_site
+    ```
+
+2. Installez les dépendances :
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Appliquez les migrations de la base de données :
+
+    ```bash
+    python manage.py migrate
+    ```
+
+4. Lancez le serveur de développement :
+
+    ```bash
+    python manage.py runserver
+    ```
+
+## Utilisation
+Accédez à l'application en ouvrant votre navigateur et en visitant `http://127.0.0.1:8000`.
+
+## Contribuer
+Les contributions sont les bienvenues ! Pour signaler un problème ou proposer une amélioration, veuillez ouvrir une "issue" sur le dépôt GitHub.
+
+## Licence
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
