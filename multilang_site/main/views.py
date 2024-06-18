@@ -1,18 +1,16 @@
-from django.shortcuts import render
-from .models import Article
-from django.utils.translation import activate, get_language
+from django.shortcuts import render, redirect
+from django.utils.translation import activate
 from django.conf import settings
 from django.shortcuts import redirect
+from django.views.decorators.csrf import csrf_exempt
+from dotenv import load_dotenv
+import openai
 
+from .models import Article
 
 def article_list(request):
     articles = Article.objects.all()
     return render(request, 'main/article_list.html', {'articles': articles})
-
-
-import openai
-from dotenv import load_dotenv
-from django.views.decorators.csrf import csrf_exempt
 
 # Charger les variables d'environnement depuis le fichier .env
 load_dotenv()
@@ -51,11 +49,6 @@ def chatbot_view(request):
 
     return render(request, 'main/chatbot.html')
 
-# views.py
-
-from django.shortcuts import render, redirect
-from django.conf import settings
-from django.utils.translation import activate
 
 def switch_language(request):
     if request.method == 'POST':
