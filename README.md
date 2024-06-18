@@ -40,7 +40,14 @@ Le projet est organisé comme suit :
     python manage.py migrate
     ```
 
-4. Lancez le serveur de développement :
+4. Créez des instance d'articles :
+
+    ```bash
+    python main/management/commands/create_random_articles.py
+    ```
+
+
+5. Lancez le serveur de développement :
 
     ```bash
     python manage.py runserver
