@@ -1,0 +1,50 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{% get_current_language as language_code %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans 'Articles' %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">{% trans 'Articles' %}</h1>
+
+        <div class="row">
+            {% for article in articles %}
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ article.title }}</h2>
+                            <p class="card-text">{{ article.content }}</p>
+                            <p class="text-muted">{% trans 'Publié le' %} {{ article.publication_date }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="my-4">
+            <form action="{% url 'set_language' %}" method="post" class="form-inline">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.path }}">
+                <select name="language" class="form-control mr-2">
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language_code == language.code %} selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-primary">{% trans "Change language" %}</button>
+            </form>
+        </div>
+
+        <div class="my-4">
+            <a href="{% url 'chatbot' %}" class="btn btn-success">{% trans "Access the Chatbot" %}</a>
+        </div>
+    </div>
+</body>
+</html>

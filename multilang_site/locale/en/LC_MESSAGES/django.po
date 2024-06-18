@@ -1,0 +1,56 @@
+# Translations for Chatbot Application.
+# Copyright (C) 2024 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-18 21:56+0100\n"
+"PO-Revision-Date: 2024-06-18 21:56+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\main\templates\main\article_list.html:6
+#: .\main\templates\main\article_list.html:12
+msgid "Articles"
+msgstr "Articles"
+
+#: .\main\templates\main\article_list.html:21
+msgid "Publié le"
+msgstr "Published on"
+
+#: .\main\templates\main\article_list.html:41
+msgid "Change language"
+msgstr "Change language"
+
+#: .\main\templates\main\article_list.html:46
+msgid "Access the Chatbot"
+msgstr "Access the Chatbot"
+
+#: .\main\templates\main\chatbot.html:7 .\main\templates\main\chatbot.html:14
+msgid "Chatbot"
+msgstr "Chatbot"
+
+#: .\main\templates\main\chatbot.html:18
+msgid "Ask me anything"
+msgstr "Ask me anything"
+
+#: .\main\templates\main\chatbot.html:21
+msgid "Submit"
+msgstr "Submit"
+
+#: .\main\templates\main\chatbot.html:22
+msgid "Back to Articles"
+msgstr "Back to Articles"
+
+#: .\main\templates\main\chatbot.html:27
+msgid "Answer"
+msgstr "Answer"
