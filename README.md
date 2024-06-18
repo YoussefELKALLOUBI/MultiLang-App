@@ -40,7 +40,7 @@ Le projet est organisé comme suit :
     python manage.py migrate
     ```
 
-4. Créez des instance d'articles :
+4. Créez des instances d'articles :
 
     ```bash
     python main/management/commands/create_random_articles.py
