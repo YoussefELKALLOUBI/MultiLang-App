@@ -16,7 +16,7 @@ def article_list(request):
 load_dotenv()
 
 # Définir la clé API OpenAI
-openai.api_key = "sk-proj-Hr3kioMTiuVIr2CMFCgnT3BlbkFJcaSWsFlVHGshhHnraN2X"
+openai.api_key = settings.openai_api_key
 
 # Créer un cache simple pour les réponses
 chat_cache = {}
