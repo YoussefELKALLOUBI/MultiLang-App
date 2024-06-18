@@ -24,7 +24,7 @@ Le projet est organisé comme suit :
 1. Clonez le dépôt Git :
 
     ```bash
-    git clone https://votre-repo-git-url.git
+    git clone https://github.com/YoussefELKALLOUBI/tt3.git
     cd multilang_site
     ```
 
