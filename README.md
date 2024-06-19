@@ -40,7 +40,14 @@ Le projet est organisé comme suit :
     python manage.py migrate
     ```
 
-4. Lancez le serveur de développement :
+4. Créez des instances d'articles :
+
+    ```bash
+    python main/management/commands/create_random_articles.py
+    ```
+
+
+5. Lancez le serveur de développement :
 
     ```bash
     python manage.py runserver
@@ -49,9 +56,11 @@ Le projet est organisé comme suit :
 ## Utilisation
 Accédez à l'application en ouvrant votre navigateur et en visitant `http://127.0.0.1:8000`.
 
+## Démonstation
+![chrome-capture-2024-6-18](https://github.com/YoussefELKALLOUBI/MultiLang-App/assets/81879215/6b947026-9dcc-4eea-821a-7974a62981dc)
+
 ## Contribuer
 Les contributions sont les bienvenues ! Pour signaler un problème ou proposer une amélioration, veuillez ouvrir une "issue" sur le dépôt GitHub.
 
 ## Licence
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
